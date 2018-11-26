@@ -179,12 +179,12 @@ public class Test extends JFrame {
 			btup = new JButton("Ãß°¡");
 			btup.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					TestBean b = new TestBean();
+					   TestBean b = new TestBean();
 					   b.setName(tfname.getText());
 		               b.setBirth(Integer.parseInt(tfbirth.getText()));
 		               b.setTel(Integer.parseInt(tftel.getText()));
 		               b.setAddr(tfaddr.getText());
-		               dba.TestUpdate(b);
+		               dba.testInsert(b);
 				}
 			});
 			btup.setBounds(37, 298, 97, 23);
