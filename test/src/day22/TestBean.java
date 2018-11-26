@@ -8,8 +8,6 @@ public class TestBean {
 	   private String addr;
 	   
 	   
-	   
-	   
 	public int getNum() {
 		return num;
 	}
