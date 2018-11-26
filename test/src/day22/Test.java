@@ -196,7 +196,7 @@ public class Test extends JFrame {
 			btvi = new JButton("전체보기");
 			btvi.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					ArrayList<TestBean>	arr = dba.bookView();
+					ArrayList<TestBean>	arr = dba.testView();
 					for(TestBean f:arr) {
 						textArea.append("이름 "+f.getName()+"\n");
 						textArea.append("생일 "+f.getBirth()+"\n");

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class TestDBA {
 	
-	Connection con;
+	   Connection con;
 	   PreparedStatement ps;
 	   String url, user, pwd ; 
 	   //디비셋팅
@@ -31,7 +31,7 @@ public class TestDBA {
 	               }
 	         }
 	   
-	   public ArrayList<TestBean> bookView(){
+	   public ArrayList<TestBean> testView(){
 	         Connection con = null;
 	         Statement st = null;
 	         ResultSet rs =null;
@@ -42,7 +42,7 @@ public class TestDBA {
 	         st = con.createStatement();
 	         rs = st.executeQuery(sql);
 	         while(rs.next()) {
-	        	 TestBean b = new TestBean();
+	        	TestBean b = new TestBean();
 	            b.setNum(rs.getInt("num"));
 	            b.setName(rs.getString("name"));
 	            b.setBirth(rs.getInt("birth"));
@@ -85,7 +85,7 @@ public class TestDBA {
 	   }
 	   public void testInsert(TestBean b) {     
 	         
-	         try {               
+		   try {               
 	         String sql ="insert into nametest values(TESTNAME_SEQ.nextval,?,?,?,?)";
 	         ps = con.prepareStatement(sql);
 	         ps.setString(1, b.getName());
