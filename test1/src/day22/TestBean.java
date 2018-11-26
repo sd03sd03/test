@@ -6,6 +6,8 @@ public class TestBean {
 	   private int birth;
 	   private int tel;
 	   private String addr;
+	   
+	   
 	public int getNum() {
 		return num;
 	}

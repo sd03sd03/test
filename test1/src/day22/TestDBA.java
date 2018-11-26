@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 
 
+
+
 public class TestDBA {
 	
 	Connection con;
@@ -81,6 +83,20 @@ public class TestDBA {
 	           }         
 		   
 		   
+	   }
+	   public void TestInsert(TestBean b) {     
+	         try {               
+	         String sql ="insert into nametest values(TESTNAME_SEQ.nextval,?,?,?,?)";
+	         ps = con.prepareStatement(sql);
+	         ps.setString(1, b.getName());
+	         ps.setInt(2, b.getBirth());         
+	         ps.setInt(3, b.getTel());      
+	         ps.setString(4, b.getAddr());   
+	         ps.executeUpdate();
+	         
+	         } catch (SQLException e) {            
+	            e.printStackTrace();          
+	         }               
 	   }
 	   
 
